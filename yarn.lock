@@ -729,6 +729,11 @@
     path-to-regexp "3.2.0"
     tslib "2.6.2"
 
+"@nestjs/mapped-types@*":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-2.0.5.tgz#485d6b44e19779c98d04e52bd1d2bcc7001df0ea"
+  integrity sha512-bSJv4pd6EY99NX9CjBIyn4TVDoSit82DUZlL4I3bqNfy5Gt+gXTa86i3I/i0iIV9P4hntcGM5GyO+FhZAhxtyg==
+
 "@nestjs/platform-express@^10.0.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-10.3.0.tgz#ea69b048ef90b78b1001eb1c6b02d9d798f5f3af"
@@ -797,6 +802,47 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@pkgr/core/-/core-0.1.0.tgz#7d8dacb7fdef0e4387caf7396cbd77f179867d06"
   integrity sha512-Zwq5OCzuwJC2jwqmpEQt7Ds1DTi6BWSwoGkbb1n9pO3hzb35BoJELx7c0T23iDkBGkh2e7tvOtjF3tr3OaQHDQ==
+
+"@prisma/client@^5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-5.10.2.tgz#e087b40a4de8e3171eb9cbf0a873465cd2068e17"
+  integrity sha512-ef49hzB2yJZCvM5gFHMxSFL9KYrIP9udpT5rYo0CsHD4P9IKj473MbhU1gjKKftiwWBTIyrt9jukprzZXazyag==
+
+"@prisma/debug@5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-5.10.2.tgz#74be81d8969978f4d53c1b4e76d61f04bfbc3951"
+  integrity sha512-bkBOmH9dpEBbMKFJj8V+Zp8IZHIBjy3fSyhLhxj4FmKGb/UBSt9doyfA6k1UeUREsMJft7xgPYBbHSOYBr8XCA==
+
+"@prisma/engines-version@5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9":
+  version "5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9.tgz#1502335d4d72d2014cb25b8ad8a740a3a13400ea"
+  integrity sha512-uCy/++3Jx/O3ufM+qv2H1L4tOemTNqcP/gyEVOlZqTpBvYJUe0tWtW0y3o2Ueq04mll4aM5X3f6ugQftOSLdFQ==
+
+"@prisma/engines@5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-5.10.2.tgz#a4851d90f76ad6d22e783d5fd2e2e8c0640f1e81"
+  integrity sha512-HkSJvix6PW8YqEEt3zHfCYYJY69CXsNdhU+wna+4Y7EZ+AwzeupMnUThmvaDA7uqswiHkgm5/SZ6/4CStjaGmw==
+  dependencies:
+    "@prisma/debug" "5.10.2"
+    "@prisma/engines-version" "5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9"
+    "@prisma/fetch-engine" "5.10.2"
+    "@prisma/get-platform" "5.10.2"
+
+"@prisma/fetch-engine@5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/fetch-engine/-/fetch-engine-5.10.2.tgz#a061f6727d395c7033b55f9c6e92f8741a70d5c5"
+  integrity sha512-dSmXcqSt6DpTmMaLQ9K8ZKzVAMH3qwGCmYEZr/uVnzVhxRJ1EbT/w2MMwIdBNq1zT69Rvh0h75WMIi0mrIw7Hg==
+  dependencies:
+    "@prisma/debug" "5.10.2"
+    "@prisma/engines-version" "5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9"
+    "@prisma/get-platform" "5.10.2"
+
+"@prisma/get-platform@5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/get-platform/-/get-platform-5.10.2.tgz#7af97b1d82e5574a474e3fbf6eaf04f4156bc535"
+  integrity sha512-nqXP6vHiY2PIsebBAuDeWiUYg8h8mfjBckHh6Jezuwej0QJNnjDiOq30uesmg+JXxGk99nqyG3B7wpcOODzXvg==
+  dependencies:
+    "@prisma/debug" "5.10.2"
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -990,10 +1036,17 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.5.tgz#1ef302e01cf7d2b5a0fa526790c9123bf1d06690"
   integrity sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==
 
-"@types/node@*", "@types/node@^20.3.1":
+"@types/node@*":
   version "20.11.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.0.tgz#8e0b99e70c0c1ade1a86c4a282f7b7ef87c9552f"
   integrity sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==
+  dependencies:
+    undici-types "~5.26.4"
+
+"@types/node@^20.11.20":
+  version "20.11.20"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.20.tgz#f0a2aee575215149a62784210ad88b3a34843659"
+  integrity sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -3953,6 +4006,13 @@ pretty-format@^29.0.0, pretty-format@^29.7.0:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
+prisma@^5.10.2:
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-5.10.2.tgz#aa63085c49dc74cdb5c3816e8dd1fb4d74a2aadd"
+  integrity sha512-hqb/JMz9/kymRE25pMWCxkdyhbnIWrq+h7S6WysJpdnCvhstbJSNP/S6mScEcqiB8Qv2F+0R3yG+osRaWqZacQ==
+  dependencies:
+    "@prisma/engines" "5.10.2"
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -4615,7 +4675,7 @@ ts-loader@^9.4.3:
     semver "^7.3.4"
     source-map "^0.7.4"
 
-ts-node@^10.9.1:
+ts-node@^10.9.2:
   version "10.9.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.2.tgz#70f021c9e185bccdca820e26dc413805c101c71f"
   integrity sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==
@@ -4692,7 +4752,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@5.3.3, typescript@^5.1.3:
+typescript@5.3.3, typescript@^5.3.3:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.3.3.tgz#b3ce6ba258e72e6305ba66f5c9b452aaee3ffe37"
   integrity sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==
@@ -4846,6 +4906,7 @@ which@^2.0.1:
     isexe "^2.0.0"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
