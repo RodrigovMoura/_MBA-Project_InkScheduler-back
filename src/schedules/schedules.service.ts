@@ -3,7 +3,6 @@ import {
   CreateScheduleDto,
   ScheduleByRangeDto,
 } from './dto/create-schedule.dto';
-import { UpdateScheduleDto } from './dto/update-schedule.dto';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -87,17 +86,5 @@ export class SchedulesService {
         schedules: schedules,
       };
     }
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} schedule`;
-  }
-
-  update(id: number, updateScheduleDto: UpdateScheduleDto) {
-    return `This action updates a #${id} schedule`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} schedule`;
   }
 }
