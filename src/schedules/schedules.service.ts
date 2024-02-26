@@ -1,5 +1,8 @@
 import { HttpException, Injectable } from '@nestjs/common';
-import { CreateScheduleDto } from './dto/create-schedule.dto';
+import {
+  CreateScheduleDto,
+  ScheduleByRangeDto,
+} from './dto/create-schedule.dto';
 import { UpdateScheduleDto } from './dto/update-schedule.dto';
 import { PrismaClient } from '@prisma/client';
 
@@ -32,7 +35,7 @@ export class SchedulesService {
       const newSchedule = await prisma.appointment.create({
         data: {
           userId,
-          date: date,
+          selectedDate: date,
           isConfirmed: false,
         },
       });
@@ -53,8 +56,37 @@ export class SchedulesService {
     }
   }
 
-  findAll() {
-    return `This action returns all schedules`;
+  async findByRange(ScheduleByRangeDto: ScheduleByRangeDto) {
+    const userId = await prisma.user.findUnique({
+      where: { email: ScheduleByRangeDto.email },
+    });
+
+    if (!userId || !userId.id) {
+      return {
+        message: 'User not found',
+      };
+    }
+
+    const schedules = await prisma.appointment.findMany({
+      where: {
+        selectedDate: {
+          gte: ScheduleByRangeDto.from,
+          lte: ScheduleByRangeDto.to,
+        },
+        userId: userId.id,
+      },
+    });
+
+    if (schedules.length === 0) {
+      return {
+        message: 'No schedules found',
+      };
+    } else {
+      return {
+        message: 'Schedules found',
+        schedules: schedules,
+      };
+    }
   }
 
   findOne(id: number) {

@@ -17,11 +17,11 @@ model User {
 }
 
 model Appointment {
-  id          Int      @id @default(autoincrement())
-  user        User     @relation(fields: [userId], references: [id])
-  userId      Int
-  date        DateTime
-  isConfirmed Boolean  @default(false)
-  created     DateTime @default(now())
-  updated     DateTime @updatedAt
+  id           Int      @id @default(autoincrement())
+  user         User     @relation(fields: [userId], references: [id])
+  userId       Int
+  selectedDate DateTime @default(now())
+  isConfirmed  Boolean  @default(false)
+  created      DateTime @default(now())
+  updated      DateTime @updatedAt
 }

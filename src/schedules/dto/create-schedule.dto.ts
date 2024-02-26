@@ -3,3 +3,9 @@ export class CreateScheduleDto {
   email: string;
   dates: Date[];
 }
+
+export class ScheduleByRangeDto {
+  email: string;
+  from: Date;
+  to: Date;
+}
